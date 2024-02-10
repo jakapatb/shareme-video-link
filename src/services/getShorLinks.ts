@@ -1,8 +1,7 @@
 import { ShortLink, ShortLinksTable, db } from "@/lib/drizzle";
 import { seed } from "@/lib/seed";
-import { cache } from "react";
 
-export const getShortLinks = cache(async () => {
+export const getShortLinks = async () => {
   let shortLinks: ShortLink[] = [];
 
   try {
@@ -18,4 +17,4 @@ export const getShortLinks = cache(async () => {
     }
   }
   return shortLinks;
-});
+};
