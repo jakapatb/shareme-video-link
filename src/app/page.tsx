@@ -27,6 +27,7 @@ export default async function Home() {
   }
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
+      {/* // @ts-ignore */}
       <form action={createLink}>
         <div className="flex flex-col items-center">
           <h1 className="text-3xl font-bold mb-8">Sign in to your account</h1>
