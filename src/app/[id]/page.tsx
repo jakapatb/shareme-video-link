@@ -29,7 +29,9 @@ export async function generateMetadata(
       },
     },
     openGraph: {
+      title: "test" + shortLink.id,
       type: "video.other",
+      url: shortLink.url,
       videos: [shortLink.vdo],
     },
   };
