@@ -19,11 +19,12 @@ export async function generateMetadata(
     title: "test" + shortLink.id,
     twitter: {
       card: "player",
-
+      title: "test" + shortLink.id,
+      site: "@test",
       players: {
         streamUrl: shortLink.vdo,
-        width: 1280,
-        height: 720,
+        width: 720,
+        height: 480,
         playerUrl: shortLink.vdo,
       },
     },
