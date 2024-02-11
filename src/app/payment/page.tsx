@@ -8,7 +8,7 @@ export const metadata: Metadata = {
     ttl: 600,
     title: "Payment",
     description: "Payment page",
-    type: "image" as any,
+    type: "profile",
     images: [
       "https://preview.redd.it/inal9o589jhc1.jpeg?auto=webp&s=f549fd0d1d33655c82aba8b8e34da226ab085660",
     ],
