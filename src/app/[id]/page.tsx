@@ -1,7 +1,5 @@
 import { getShortLinkById } from "@/services/getShortLinkById";
-import { db } from "@vercel/postgres";
 import { Metadata, ResolvingMetadata } from "next";
-import { redirect } from "next/navigation";
 import React from "react";
 
 type Props = {
@@ -46,9 +44,7 @@ const ShareLinkPage = async ({
   );
   if (!shortLink) return <div>Link not found</div>;
 
-  redirect(shortLink.url);
-
-  return null;
+  return <p>Should linking to {shortLink.url}</p>;
 };
 
 export default ShareLinkPage;
