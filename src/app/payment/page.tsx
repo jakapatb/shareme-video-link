@@ -20,7 +20,7 @@ export const metadata = {
   twitter: {
     title: "Payment",
     description: "Payment page",
-    card: "summary",
+    card: "summary_large_image",
     images: [
       {
         url: "https://preview.redd.it/inal9o589jhc1.jpeg?auto=webp&s=f549fd0d1d33655c82aba8b8e34da226ab085660",
