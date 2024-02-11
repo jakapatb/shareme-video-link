@@ -1,5 +1,5 @@
 import { getShortLinkById } from "@/services/getShortLinkById";
-import { Metadata, ResolvingMetadata } from "next";
+import { Metadata, ResolvingMetadata } from "next/types";
 import React from "react";
 
 type Props = {
@@ -10,7 +10,7 @@ type Props = {
 export async function generateMetadata(
   { params, searchParams }: Props,
   parent: ResolvingMetadata
-): Promise<Metadata> {
+): Promise<any> {
   const { id } = params;
   const shortLink = await getShortLinkById(
     isNaN(parseInt(id)) ? 1 : parseInt(id)
@@ -18,15 +18,16 @@ export async function generateMetadata(
   return {
     title: "test" + shortLink.id,
     twitter: {
-      card: "player",
+      card: "summary_large_image",
       title: "test" + shortLink.id,
       site: "@test",
-      players: {
-        streamUrl: shortLink.vdo,
-        width: 720,
-        height: 480,
-        playerUrl: shortLink.vdo,
-      },
+      images: [
+        {
+          url: shortLink.vdo,
+          width: 720,
+          height: 480,
+        },
+      ],
     },
     openGraph: {
       title: "test" + shortLink.id,
