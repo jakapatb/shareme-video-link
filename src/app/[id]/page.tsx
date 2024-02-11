@@ -16,19 +16,19 @@ export async function generateMetadata(
     isNaN(parseInt(id)) ? 1 : parseInt(id)
   );
   return {
-    title: "test",
+    title: "test" + shortLink.id,
     twitter: {
       card: "player",
-      players: [
-        {
-          streamUrl: shortLink.vdo,
-          width: 1280,
-          height: 720,
-          playerUrl: shortLink.vdo,
-        },
-      ],
+
+      players: {
+        streamUrl: shortLink.vdo,
+        width: 1280,
+        height: 720,
+        playerUrl: shortLink.vdo,
+      },
     },
     openGraph: {
+      type: "video.other",
       videos: [shortLink.vdo],
     },
   };
